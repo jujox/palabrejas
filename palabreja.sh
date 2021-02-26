@@ -8,7 +8,9 @@ echo -ne "\n\033[1m$palabreja\033[0m\n"
 echo -ne "\nPulsa 'intro' para definición"
 read
 echo -ne "\n"
+echo -e "\033[32m"
 cat definiciones/$palabreja.def | cut -d ":" -f 2-
+echo -e "\033[0m"
 echo -ne "\n"
 echo -ne "https://dle.rae.es/$palabreja"
 echo -ne "\n"
