@@ -9,6 +9,12 @@ echo -ne "\nPulsa 'intro' para definición"
 read
 echo -ne "\n"
 cat definiciones/$palabreja.def | cut -d ":" -f 2-
-#echo -ne "\n"
-#curl -L -s https://dle.rae.es/$palabreja | grep 'name="description"'
+echo -ne "\n"
+echo -ne "https://dle.rae.es/$palabreja"
+echo -ne "\n"
+echo -ne "Ver en firefox [y | N] "
+read launch_firefox
+if [ ! -z $launch_firefox ] && [ $launch_firefox == "y" ]; then
+    firefox https://dle.rae.es/$palabreja
+fi
 echo -ne "\n"

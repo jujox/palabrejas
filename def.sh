@@ -10,3 +10,10 @@ echo -ne "\nPulsa 'intro' para ver la palabreja"
 read
 echo -ne "\n\033[1m$palabreja\033[0m\n"
 echo -ne "\n"
+echo -ne "https://dle.rae.es/$palabreja"
+echo -ne "Ver en firefox [y | N] "
+read launch_firefox
+if [ ! -z $launch_firefox ] && [ $launch_firefox == "y" ]; then
+    firefox https://dle.rae.es/$palabreja
+fi
+echo -ne "\n"
